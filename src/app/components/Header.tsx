@@ -1,11 +1,29 @@
+import Link from 'next/link'
 
-
-export default function Home() {
+export default function Header() {
   return (
-    <div>
-      <main className="flex justify-center items-center h-screen bg-gray-200">
-        <h1 className="text-4xl font-bold">William Opio</h1>
-      </main>
-    </div>
-  );
+    <header className="bg-gray-800 py-4 text-white">
+      <nav className="container mx-auto flex items-center justify-between">
+        <div className="logo">
+          <Link href="/">
+            <span className="text-xl font-bold">TobiStudio</span>
+          </Link>
+        </div>
+        <ul className="flex space-x-4">
+          <li>
+            <Link href="/">Home</Link>
+          </li>
+          <li>
+            <Link href="#about">About</Link>
+          </li>
+          <li>
+            <Link href="#portfolio">Portfolio</Link>
+          </li>
+          <li>
+            <Link href="#contact">Contact</Link>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  )
 }
